@@ -35,6 +35,39 @@ ul.nav-links {
   cursor: pointer;
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   z-index: 1000;
+}
+
+#nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: var(--background-color, #fff);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1100;
+  display: block;
+  padding-top: 2rem;
+}
+
+#nav-menu.open {
+  transform: translateX(0);
+}
+
+#nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1090;
+}
+#nav-overlay.active {
+  display: block;
 }
