@@ -11,32 +11,38 @@
     <title>Explore</title>
   </head>
   <body>
-    <header>
-      <img id="logo" src="./img/logo.png" alt="Explore" />
-      <h2>Welcome to Explore</h2>
-      <p>Your adventure begins here.</p>
-    </header>
-    <i id="burger-menu" class="fa-solid fa-bars"></i>
-    <div id="nav-overlay"></div>
-    <nav id="nav-menu">
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section id="home">
-        <article>
+    <div id="content">
+      <header>
+        <img id="logo" src="./img/logo.png" alt="Explore" />
+        <h1 class="ephesis-regular">Welcome to Explore</h1>
+        <p>Your adventure begins here.</p>
+      </header>
+      <i id="burger-menu" class="fa-solid fa-bars"></i>
+      <div id="nav-overlay"></div>
+      <nav id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <article class="featured">
           <h2>Discover Nature with Explore</h2>
+          <img src="./img/forrest.png" alt="Green Forest" width="300" />
           <p>
             Join us for unforgettable hiking experiences and outdoor adventures.
           </p>
         </article>
-        <article>
+        <article class="featured">
+          <h2>Experience the Mountains</h2>
           <figure>
-            <img src="./img/mountains.png" alt="Explore logo" width="300" />
+            <img
+              src="./img/mountains.png"
+              alt="Mountain Landscape"
+              width="300"
+            />
             <figcaption>
               <details>
                 <summary>Why Hike with Us?</summary>
@@ -49,11 +55,21 @@
             </figcaption>
           </figure>
         </article>
-        <article>
+        <article class="featured">
           <h2>Upcoming Hikes</h2>
-          <p>Check out our latest hikes and activities.</p>
+          <figure>
+            <img src="./img/trail.png" alt="Mountain Landscape" width="300" />
+            <details>
+              <summary>Check out our latest hikes and activities.</summary>
+              <ul>
+                <li>June 15: Sunrise Hike at Blue Ridge</li>
+                <li>July 10: Family Fun Trail at Pine Woods</li>
+                <li>August 5: Advanced Trek at Rocky Peak</li>
+              </ul>
+            </details>
+          </figure>
         </article>
-      </section>
+      </main>
       <section id="about-us">
         <article>
           <h2>Exploring the Wild: A Beginner’s Guide</h2>
@@ -63,17 +79,17 @@
           </p>
         </article>
       </section>
-    </main>
-    <aside>
-      <h3>Quick Hiking Tip</h3>
-      <p>
-        Always check the weather before heading out and let someone know your
-        route.
-      </p>
-    </aside>
-    <footer>
-      <p>&copy; 2025 Explore. All rights reserved.</p>
-    </footer>
+      <aside>
+        <h3>Quick Hiking Tip</h3>
+        <p>
+          Always check the weather before heading out and let someone know your
+          route.
+        </p>
+      </aside>
+      <footer>
+        <p>&copy; 2025 Explore. All rights reserved.</p>
+      </footer>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
