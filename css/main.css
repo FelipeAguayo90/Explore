@@ -47,12 +47,13 @@ nav {
 
 main {
   padding: 1rem;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -66,6 +67,32 @@ header p {
   font-size: 1.2rem;
   color: var(--midnight-black);
   margin-top: 0.5rem;
+}
+
+figure img {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+li,
+details {
+  margin: 0.5rem;
+}
+
+.featured {
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+details li {
+  list-style-type: none;
 }
 
 ul.nav-links {
@@ -88,6 +115,12 @@ ul.nav-links {
 .nav-links li a {
   text-decoration: none;
   color: black;
+  transition: font-size 0.2s, color 0.2s;
+}
+
+.nav-links li a:hover {
+  font-size: 1.1em;
+  color: var(--sunset-orange);
 }
 
 .fa-solid.fa-bars {
@@ -132,4 +165,13 @@ ul.nav-links {
 }
 #nav-overlay.active {
   display: block;
+}
+
+summary {
+  transition: font-size 0.2s, cursor 0.2s;
+}
+
+summary:hover {
+  font-size: 1.15em;
+  cursor: pointer;
 }

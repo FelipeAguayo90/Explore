@@ -11,7 +11,7 @@
     <title>Explore</title>
   </head>
   <body>
-    <div id="content">
+    <div id="home">
       <header>
         <img id="logo" src="./img/logo.png" alt="Explore" />
         <h1 class="ephesis-regular">Welcome to Explore</h1>
@@ -22,7 +22,7 @@
       <nav id="nav-menu">
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#events">Events</a></li>
+          <li><a href="#upcoming-hikes">Events</a></li>
           <li><a href="#about-us">About Us</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -30,10 +30,19 @@
       <main>
         <article class="featured">
           <h2>Discover Nature with Explore</h2>
-          <img src="./img/forrest.png" alt="Green Forest" width="300" />
-          <p>
-            Join us for unforgettable hiking experiences and outdoor adventures.
-          </p>
+          <figure>
+            <img src="./img/forrest.png" alt="Green Forest" width="300" />
+            <figcaption>
+              <details>
+                <summary>Why Choose Explore?</summary>
+                <ul>
+                  <li>Guided Hikes</li>
+                  <li>Community Events</li>
+                  <li>Safety First</li>
+                </ul>
+              </details>
+            </figcaption>
+          </figure>
         </article>
         <article class="featured">
           <h2>Experience the Mountains</h2>
@@ -55,7 +64,7 @@
             </figcaption>
           </figure>
         </article>
-        <article class="featured">
+        <article id="upcoming-hikes" class="featured">
           <h2>Upcoming Hikes</h2>
           <figure>
             <img src="./img/trail.png" alt="Mountain Landscape" width="300" />
@@ -88,6 +97,11 @@
       </aside>
       <footer>
         <p>&copy; 2025 Explore. All rights reserved.</p>
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-square-github"></i>
       </footer>
     </div>
     <script src="./js/main.js"></script>
