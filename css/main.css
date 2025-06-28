@@ -296,4 +296,38 @@ footer i:hover {
     box-sizing: border-box;
     margin: 0.5rem;
   }
+
+  nav#nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    background-color: var(--sky-gold);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1200;
+    padding: 1rem 0;
+  }
+
+  .fa-solid.fa-bars {
+    display: none;
+  }
+
+  ul.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links li {
+    padding: 0 1rem;
+  }
 }
