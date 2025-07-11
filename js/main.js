@@ -39,3 +39,46 @@ loadYouTubeVideoAsync('rIjSdgP7Qxo', '#hiking-tip') // Replace with your YouTube
   .catch((err) => {
     console.error(err);
   });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const contactLink = document.querySelector('a[href="#contact"]');
+  const contactInfo = document.querySelector('.contact-info');
+
+  if (contactLink && contactInfo) {
+    contactLink.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+
+      if (contactInfo.classList.contains('visible')) {
+        contactInfo.classList.remove('visible');
+        setTimeout(() => (contactInfo.style.display = 'none'), 500);
+      } else {
+        contactInfo.style.display = 'block';
+        setTimeout(() => contactInfo.classList.add('visible'), 10);
+      }
+    });
+  }
+});
+
+let themeApplied = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('theme-toggle');
+
+  toggleButton.addEventListener('click', () => {
+    const existingTheme = document.getElementById('theme-style');
+
+    if (!themeApplied) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = './css/dark-theme.css';
+      link.id = 'theme-style';
+      document.head.appendChild(link);
+      themeApplied = true;
+    } else {
+      existingTheme.remove();
+      themeApplied = false;
+    }
+  });
+});

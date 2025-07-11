@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<!-- HEADER/DISCLAIMER
+
+Project:  Responsive Web Design Project
+Name: Felipe Aguayo
+Submitted: 06/27/25
+
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class. 
+
+-->
 <html lang="en">
   <head>
     <script
@@ -21,13 +35,14 @@
       <div id="nav-overlay"></div>
       <nav id="nav-menu">
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#main-content">Home</a></li>
           <li><a href="#upcoming-hikes">Events</a></li>
           <li><a href="#about-us">About Us</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><button id="theme-toggle">Toggle Theme</button></li>
         </ul>
       </nav>
-      <main>
+      <main id="main-content">
         <article class="featured">
           <h2>Discover Nature with Explore</h2>
           <figure>
@@ -108,11 +123,18 @@
       </aside>
       <footer id="contact">
         <p>&copy; 2025 Explore. All rights reserved.</p>
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-        <i class="fa-brands fa-square-twitter"></i>
-        <i class="fa-brands fa-square-github"></i>
+        <section class="contact-info" style="display: none">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@explore.com">info@explore.com</a></p>
+          <p>Or connect with us on social media:</p>
+          <div class="social-media-icons">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-github"></i>
+          </div>
+        </section>
       </footer>
     </div>
     <script src="./js/main.js"></script>
