@@ -1,6 +1,25 @@
+/*
+Project:  Project 5-Personal Web Site-Visitor Form Validation-Refactor JS
+Name: Felipe Aguayo
+Submitted: 08/01/25
+
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+
+Added the sections visibility toggle functionality
+*/
 const burger = document.getElementById('burger-menu');
 const nav = document.getElementById('nav-menu');
 const overlay = document.getElementById('nav-overlay');
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  initValidation('myForm', 'success');
+});
 
 burger.addEventListener('click', () => {
   nav.classList.add('open');
@@ -43,6 +62,40 @@ loadYouTubeVideoAsync('rIjSdgP7Qxo', '#hiking-tip') // Replace with your YouTube
 document.addEventListener('DOMContentLoaded', function () {
   const contactLink = document.querySelector('a[href="#contact"]');
   const contactInfo = document.querySelector('.contact-info');
+  const mainLink = document.querySelector('a[href="#home"]');
+  const heroSection = document.querySelector('#hero');
+  const eventsLink = document.querySelector('a[href="#upcoming-hikes"]');
+  const mainEvents = document.querySelector('.events');
+
+  if (eventsLink && mainEvents) {
+    eventsLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelector('.events').scrollIntoView({ behavior: 'smooth' });
+
+      if (mainEvents.classList.contains('visible')) {
+        mainEvents.classList.remove('visible');
+        setTimeout(() => (mainEvents.style.display = 'none'), 500);
+      } else {
+        mainEvents.style.display = 'block';
+        setTimeout(() => mainEvents.classList.add('visible'), 10);
+      }
+    });
+  }
+
+  if (mainLink && heroSection) {
+    mainLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelector('#logo').scrollIntoView({ behavior: 'smooth' });
+
+      if (heroSection.classList.contains('visible')) {
+        heroSection.classList.remove('visible');
+        setTimeout(() => (heroSection.style.display = 'none'), 500);
+      } else {
+        heroSection.style.display = 'block';
+        setTimeout(() => heroSection.classList.add('visible'), 10);
+      }
+    });
+  }
 
   if (contactLink && contactInfo) {
     contactLink.addEventListener('click', function (event) {
@@ -82,3 +135,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+function showForm() {
+  const logVisitButton = document.querySelector('#log-visit');
+  const formContainer = document.querySelector('.visitor-form');
+
+  logVisitButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    // if (logVisitButton && formContainer) {
+    //   if (formContainer.classList.contains('visible')) {
+    //     formContainer.classList.remove('visible');
+    //     setTimeout(() => (formContainer.style.display = 'none'), 500);
+    //   } else {
+    formContainer.style.display = 'flex';
+    setTimeout(() => formContainer.classList.add('visible'), 10);
+    overlay.classList.add('active');
+    // }
+    // }
+  });
+}
+showForm();
+
+function hideForm() {
+  const closeButton = document.querySelector('#back-button');
+  const formContainer = document.querySelector('.visitor-form');
+
+  closeButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    formContainer.classList.remove('visible');
+    setTimeout(() => (formContainer.style.display = 'none'), 500);
+    overlay.classList.remove('active');
+  });
+}
+hideForm();
