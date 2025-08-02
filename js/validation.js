@@ -77,6 +77,7 @@ const stateAbbreviations = [
   'WI',
   'WY',
 ];
+let formContainer = document.querySelector('.visitor-form');
 let form = null;
 let successMsg = null;
 function initValidation(formId, successId) {
@@ -111,6 +112,9 @@ function submitForm(ev) {
   } else {
     form.style.display = 'none';
     successMsg.style.display = 'block';
+    setTimeout(() => {
+      formContainer.classList.remove('visible');
+    }, 4000);
   }
 }
 
